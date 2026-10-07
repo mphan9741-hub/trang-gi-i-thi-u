@@ -1,0 +1,297 @@
+/* XÓA KHOẢNG TRỐNG MẶC ĐỊNH */
+*{
+    box-sizing: border-box;  /*tất cả các phần tử đều tính kích thước dễ kiểm soát hơn. */
+    margin: 0;               /*khoảng cách với bên ngoài */
+    padding: 0;              /* khoảng cách với bên trong*/
+}
+
+
+/* TOÀN BỘ TRANG */
+body {
+    font-family: Arial;    /* kiểu chữ */
+    background: #dbe2f0;
+    color: #123b7a;
+    display: flex;
+}
+
+
+/* MENU BÊN TRÁI */
+.menu {
+    width: 220px;
+    height: 120vh;
+    background: #123b7a;
+    color: white;
+
+    padding: 25px 15px;
+
+    display: flex;           /* các ô đc xếp theo hàng */
+    flex-direction: column;  /* quy định các phần tử xếp theo chiều dọc */
+    gap: 12px;              /*khoảng cách giữ các phần tử */
+}
+
+
+/* TÊN TRƯỜNG */
+.menu h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+    height: 70px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 170px;
+    height: 60px;
+
+    object-fit: contain;/*ảnh nằm gọn bên trong khung, không bị méo và không bị cắt.*/
+}
+
+.menu h3 {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* CÁC MENU */
+.menu-item {
+    padding: 12px 8px;
+    font-size: 15px;
+    color: white;
+}
+
+
+/* HOVER MENU */
+.menu-item:hover {             /* */
+    background: #3155a0;     /* */
+    transform: translateX(5px);/*Di chuyển phần tử sang bên phải 5px */
+    transition: 0.3s;          /* chuyển động mượt 0,3 giây.*/
+}
+
+
+/* PHẦN NỘI DUNG */
+.main {
+    width: calc(100% - 220px);  
+}   /*lấy toàn bộ chiều rộng trừ 220px. */
+
+
+/* THANH TRÊN */
+.top {
+    height: 55px;
+    background: #203b78;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;      /* căn các phần tử con vào giữa theo chiều dọc*/
+
+    gap: 25px;
+    padding: 10px 30px;
+
+    color: white;
+}
+
+
+/* Ô TÌM KIẾM */
+.top input {
+    width: 450px;
+    height: 35px;
+
+    padding: 10px;
+    border: 1px solid white;
+
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+
+/* PHẦN CHÀO */
+.welcome {
+    background: #3275e8;
+    color: white;
+
+    margin: 12px 20px;
+    padding: 25px;
+
+    height: 130px;
+
+    border: 1px solid #3275e8;
+    border-radius: 20px;
+
+}
+
+.welcome h1 {
+    font-size: 28px;
+    margin: 8px 0;
+}
+
+
+/* 4 Ô CHỨC NĂNG */
+.functions {
+    display: flex;
+    justify-content: space-between;/*đẩy các phần tử con ra xa nhau*/
+    align-items: center;
+
+    gap: 15px;
+    margin: 20px;
+
+
+}
+
+
+/* TỪNG Ô */
+.function-box {
+    background: white;
+    width: 25%;
+    height: 80px;
+    padding: 15px;
+    border: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+
+}
+
+
+/* ICON */
+.icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    border-radius: 10px;
+}
+
+
+/* MÀU ICON */
+.blue {
+    background: #2166dc;
+}
+
+.orange {
+    background: orange;
+}
+
+.green {
+    background: #13a875;
+}
+
+.red {
+    background: #ef3c3c;
+}
+
+
+.function-box p {
+    font-size: 12px;
+}
+
+
+.function-box h3 {
+    font-size: 15px;
+}
+
+
+/* KHU VỰC NỘI DUNG */
+.content {
+    display: flex;
+    flex-direction: row;/*sắp xếp các phần tử con theo hàng ngang, từ trái → phải.*/
+
+    gap: 20px;
+
+    margin: 20px;
+}
+
+
+/* MỖI CỘT */
+.column {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    /*xếp các phần tử con theo chiều dọc, từ trên xuống dưới.*/
+    gap: 20px;
+}
+
+
+/* HỘP THÔNG BÁO */
+.box {
+    background: white;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+/* TIÊU ĐỀ */
+.box h2 {
+    font-size: 16px;
+    color: #1454b8;
+
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #286be0;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* TỪNG TIN */
+.news {
+    padding: 15px 5px;
+    border-bottom: 1px solid #ddd;
+
+    color: #111;
+
+    font-size: 14px;
+
+    line-height: 25px;
+    /*quy định chiều cao của mỗi dòng chữ, tức là khoảng cách giữa các dòng.*/
+}
+
+
+/* NGÀY THÁNG */
+.news small {
+    color: #999;
+    font-size: 12px;
+}
+
+
+/* HOVER TIN */
+.news:hover {
+    background: #eef4ff;
+    transform: translateX(5px);
+    transition: 0.3s;
+}
+
+
+/* SỰ KIỆN */
+.event {
+    height: 200px;
+}
+
+.event h2 {
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+
+.event p {
+    text-align: center;
+    padding: 60px 0;
+    color: #999;
+}
